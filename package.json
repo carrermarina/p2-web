@@ -7,8 +7,9 @@
     "start": "node app.js",
     "installnpm": "npm install",
     "deletedist": "del /s /q dist",
+    "copy": "xcopy /r/h/s/i/y .\\src\\js .\\dist\\js",
     "check": "npx check-html-links dist",
-    "build": "npm run installnpm && npm run deletedist && npm run html-minifier && npm run cssmini && npm run check",
+    "build": "npm run installnpm && npm run deletedist && npm run html-minifier && npm run copy && npm run cssmini && npm run check",
     "cssmini": "html-minifier --input-dir .\\src\\css --output-dir .\\dist\\css --file-ext css --remove-comments --collapse-whitespace --minify-js true --minify-css true",
     "html-minifier": "html-minifier --input-dir src --output-dir dist --file-ext html --remove-comments --collapse-whitespace --minify-js true --minify-css true"
   },
@@ -20,7 +21,8 @@
   "author": "Marina Ortega Picazo",
   "license": "MIT",
   "dependencies": {
-    "express": "4.17.1"
+    "express": "4.17.1",
+    "vue": "^3.2.22"
   },
   "devDependencies": {
     "html-minifier": "4.0.0"
