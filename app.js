@@ -1,5 +1,5 @@
 const express = require('express')
-const https = require('https')
+const https = require('http')
 const fs = require('fs')
 const cors = require('cors')
 const app = express()
@@ -16,7 +16,8 @@ app.use(express.json());
 app.use(express.urlencoded());
 
 // GET /api/list
-// en undefined 
+// en comptes de undefined li poses pel que vols filtrar
+// HTTP request format: http://localhost:<PORT>/api/list?search=<SEARCH_STRING>
 app.get('/api/list', function (req, res) {
   if (req.query.search == undefined) {
     res.status(500).send("Bad parameters")
@@ -36,6 +37,8 @@ app.get('/api/list', function (req, res) {
 })
 
 // POST /api/detail
+// retorna descripcio hero
+// HTTP request format: http://localhost:<PORT>/api/detail
 app.post('/api/detail', function (req, res) {
     if (req.body.key == undefined) {
       res.status(500).send("Bad parameters")
