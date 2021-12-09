@@ -1,0 +1,12 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(https://images2.alphacoders.com/105/1057588.jpg);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
