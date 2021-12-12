@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+HEAD
 class Character {
     constructor(key, name, role, portrait, message) {
       this.key = key;
@@ -8,7 +8,7 @@ class Character {
       this.message = message
     }
   }
-=======
+
 
 Vue.component('poke-button', {
     props: {
@@ -23,4 +23,4 @@ Vue.component('poke-button', {
         }
     }
 })
->>>>>>> b9d3cb844c41f31bc0ab6b138c5c49cf71667181
+
