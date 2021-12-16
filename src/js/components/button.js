@@ -1,3 +1,5 @@
+import {}  from "js/searchbar.js"
+
 new Vue({
     el: '#app',
     data() {
