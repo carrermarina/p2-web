@@ -27,9 +27,10 @@
 
     <main>
         <div id="app">
+            <!-- la action ha de ser quan submit -->
             <div class= "searchbar" method="GET">
-                <button class = "searchbtn">Search</button>
-                <input class = "searchfield" type="input" v-model="searchField" placeholder="Input here"/>
+                <button class="searchbtn">Search</button>
+                <input class="searchfield" type="input" v-model="searchField" placeholder="Input here"/>
             </div>
             <div class="data">
                 <table v-if="characters.lenght" class="table">
