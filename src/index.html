@@ -10,11 +10,26 @@
     <link rel="button" href="../js/components/button.js">
 </head>
 <body>
+    <!-- Gestió de l'api-->
+    <script>
+        fetch('https://localhost:3000/api/list?search=' + input, {
+                method: 'GET'
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data["overwatch"])
+            })
+            .catch((error) => {
+                console.error('Error:', error)
+            })
+    </script>
+
+
     <main>
         <div id="app">
-            <div class= "searchbar">
+            <div class= "searchbar" method="GET">
                 <button class = "searchbtn">Search</button>
-                <input class = "searchfield" type="text" v-model="searchField" placeholder="Input here"/>
+                <input class = "searchfield" type="input" v-model="searchField" placeholder="Input here"/>
             </div>
             <div class="data">
                 <table v-if="characters.lenght" class="table">
