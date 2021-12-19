@@ -1,4 +1,4 @@
-import {}  from "../components/searchbar"
+import {}  from "../components/searchbar.js"
 
 var app = new Vue({
     el: '#app',
