@@ -12,7 +12,7 @@ Vue.component('searchbar', {
                 console.log('Success:', data["overwatch"])
             })
             .catch((error) => {
-                console.error('Error:', error)
+                console.error('Error: skere', error)
             })
         }
     }
