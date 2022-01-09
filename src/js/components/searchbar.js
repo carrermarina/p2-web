@@ -1,4 +1,3 @@
-
 Vue.component('searchbar', {
     props: {
         name:"hello"
