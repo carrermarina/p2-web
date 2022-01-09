@@ -18,11 +18,11 @@
         <div id="app">
             <!-- la action ha de ser quan submit -->
             <div class= "searchbar" method="GET">
-                <button class="searchbtn">Search</button>
+                <button class="searchbtn" v-on:click="loadPokeData">Search</button>
                 <input class="searchfield" id="inputinfo" type="input" v-model="searchField" placeholder="Input here"/>
             </div>
 
-            <div class="data">
+            <!--<div class="data">
                 <table v-if="characters.lenght" class="table">
                     <thead>
                         <tr>
@@ -36,11 +36,7 @@
                         
                     </tbody>
                 </table>
-            </div>
-            <div class="box">
-                <div class="left">imatge</div>
-                <div class="right">Hanzo</div>
-            </div>
+            </div>-->
         </div>
     </main>
 </body>
