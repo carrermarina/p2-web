@@ -35,7 +35,7 @@ Vue.component('search-output', {
 new Vue({
   el: "#app",
   data: {
-    list: characters,
+    list: 'http://localhost:3000/data.json',
     search: ''
   },
   computed: {

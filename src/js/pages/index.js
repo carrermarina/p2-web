@@ -1,4 +1,4 @@
-const characters = [
+/*const characters = [
   'Christine',
   'Bernie',
   'Amy',
@@ -14,7 +14,9 @@ const characters = [
   'Ken',
   'Josh',
   'Jamie'
-]
+]*/
+
+const characters = JSON.parse("data.json");
 
 Vue.component('search-bar', {
   props: ['value'],
