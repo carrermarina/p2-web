@@ -1,10 +1,12 @@
 Vue.component('searchbar', {
     props: {
-        name:"hello"
+        data: Object
+
     },
+    template: '<button v-on:click="loadOverwatchData">Search</button>' + '<input class="searchfield" id="inputinfo" type="input" v-model.string="searchField" placeholder="Input here"/>',
     methods: {
         loadOverwatchData() {
-            fetch('http://localhost:3000/data.json/list?search=' + this.$root.searchField, {
+            fetch('http://localhost:3000/data.json/list?search=' + this.data, {
                 method: 'GET'
             })
             .then(response => response.json())

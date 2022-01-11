@@ -1,4 +1,6 @@
-/*const characters = [
+import {}  from "../components/searchbar.js"
+
+const characters = [
   'Christine',
   'Bernie',
   'Amy',
@@ -14,9 +16,7 @@
   'Ken',
   'Josh',
   'Jamie'
-]*/
-
-const characters = JSON.parse("data.json");
+]
 
 Vue.component('search-bar', {
   props: ['value'],

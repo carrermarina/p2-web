@@ -13,10 +13,40 @@
     <title>p2</title>  
 </head>
 <body> 
-  <div id="app">
+  <!--<div id="app">
     <search-bar v-model="search"></search-bar>
     <search-output :matches="matches"><search-output>
+  </div>-->
+
+  <div id="app">
+    <searchbar
+      
+    ></searchbar>
   </div>
+
+
+  <!--<div id="app">
+    <div class= "searchbar" method="GET">
+        <button class="searchbtn">Search</button>
+        <input class="searchfield" id="inputinfo" type="input" v-model="searchField" placeholder="Input here"/>
+    </div>
+  </div>
+    <div class="data">
+        <table v-if="characters.lenght" class="table">
+            <thead>
+                <tr>
+                     <th>Character</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="item in returnCharacter">
+                    <td><a v-bind:href="item.uri" target="_blank">{{item.name}}</a></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>-->
+
 </body>
 
 </html>

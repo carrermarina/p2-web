@@ -1,3 +1,5 @@
+import {}  from "../components/searchbar.js"
+
 const characters = [
   'Christine',
   'Bernie',
@@ -35,7 +37,7 @@ Vue.component('search-output', {
 new Vue({
   el: "#app",
   data: {
-    list: 'http://localhost:3000/data.json',
+    list: characters,
     search: ''
   },
   computed: {
