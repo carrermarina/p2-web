@@ -1,3 +1,5 @@
+import GetCharacters from "../services/getCharacters.js";
+
 Vue.component("search-bar", {
     data: () => {
       return {
@@ -5,14 +7,21 @@ Vue.component("search-bar", {
       };
     },
     template: `
-      <form v-on:submit.prevent="search">
+      <form v-on:submit.prevent="loadData">
       <input type="text" v-model="searchInput">
       <input type="submit" value="search">
       </form>`,
+    
     methods: {
-      search(event) {
-        console.log(this.searchInput);
-        this.$root.searchInput = this.searchInput;
+     
+      loadData() {
+        this.$root.searchInput = this.searchInput
+        const getCharacService = new GetCharacters();
+        console.log(this.$root.searchInput)
+    
+        this.$root.characters = getCharacService.execute(this.$root.searchInput)
+        console.log(this.$root.characters)
       }
+      
     }
 });

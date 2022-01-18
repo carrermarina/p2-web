@@ -9,7 +9,7 @@ export default class GetCharactersService {
             'http://localhost:3000/api/list?search=' + searchInput
         )
         .then(response => response.json())
-        .then(data => this.fulldata = data);
+        .then(data => /*this.fulldata = data*/ console.log(data));
 
         return this.fulldata
     }

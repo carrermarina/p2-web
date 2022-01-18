@@ -12,7 +12,7 @@ const app = new Vue({
       searchInput: ""
     };
   },
-  
+
   /*
   methods: {
     loadData() {
