@@ -1,26 +1,17 @@
-import {}  from "js/components/searchbar.js"
+import GetCharacters from "../services/getCharacters.js";
 
-new Vue({
-    el: '#app',
-    data() {
-      return {
-          searchField: null,
-          characters:[
-              
-          ]
-      };
-    },
-    computed: {
-      returnCharacter(){
-        if(this.searchField){
-        return this.characters.filter((item)=>{
-          return this.searchField.toLowerCase().split(' ').every(v => item.title.toLowerCase().includes(v))
-        })
-        }else{
-          return this.characters;
-        }
-      }
+Vue.component("c-button", {
+  props: {
+    data: Object
+  },
+  template: '<button v-on:click="loadData">{{ data.name }}</button>',
+  methods: {
+    loadData() {
+      const getCharacService = new GetCharacters();
+      console.log(this.$root.searchInput)
+
+      this.$root.characters = getCharacService.execute(this.$root.searchInput)
+      console.log(this.$root.characters)
     }
-   
-  
-  })
+  }
+});

@@ -1,46 +1,27 @@
-const characters = [
-  'Christine',
-  'Bernie',
-  'Amy',
-  'Jimmy',
-  'Peter',
-  'Kenny',
-  'Aaron',
-  'Kenneth',
-  'Ryan',
-  'JC',
-  'Barbara',
-  'Meet',
-  'Ken',
-  'Josh',
-  'Jamie'
-]
+import {} from "../components/button.js";
+import {} from "../components/fichas.js";
+import {} from "../components/searchbar.js";
+import GetCharacters from "../services/getCharacters.js";
 
-Vue.component('search-bar', {
-  props: ['value'],
-  template: `<input :value="value" @input="$emit('input', $event.target.value)">`
-})
-
-Vue.component('search-output', {
-  props: ['matches'],
-  template: `
-    <ul>
-      <li v-for="item in matches" :key="item">
-        {{ item }}
-      </li>
-    </ul>
-  `
-})
-
-new Vue({
-  el: "#app",
-  data: {
-    list: characters,
-    search: ''
+const app = new Vue({
+  el: "#Personajes",
+  data: () => {
+    return {
+      characters: [],
+      characterData: "",
+      searchInput: ""
+    };
   },
-  computed: {
-    matches: function () {
-      return this.list.filter(item => item.toLowerCase().includes(this.search.toLowerCase()))
+  
+  /*
+  methods: {
+    loadData() {
+      const getCharacService = new GetCharacters();
+      console.log(this.searchInput)
+
+      this.characters = getCharacService.execute(this.searchInput)
+      console.log(this.characters)
     }
   }
-})
+  */
+});

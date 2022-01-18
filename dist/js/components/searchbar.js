@@ -1,19 +1,18 @@
-Vue.component('searchbar', {
-    props: {
-        name:"hello"
+Vue.component("search-bar", {
+    data: () => {
+      return {
+        searchInput: ""
+      };
     },
+    template: `
+      <form v-on:submit.prevent="search">
+      <input type="text" v-model="searchInput">
+      <input type="submit" value="search">
+      </form>`,
     methods: {
-        loadOverwatchData() {
-            fetch('http://localhost:3000/data.json/list?search=' + this.$root.searchField, {
-                method: 'GET'
-            })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Success:', data["overwatch"])
-            })
-            .catch((error) => {
-                console.error('Error: skere', error)
-            })
-        }
+      search(event) {
+        console.log(this.searchInput);
+        this.$root.searchInput = this.searchInput;
+      }
     }
-})
+});
