@@ -2,6 +2,9 @@ export default class GetCharactersService {
 
     constructor () { this.fulldata = [] }
 
+    /* const response = await fetch(...).then(...).then(data=>data);
+    this.fulldata = response.text() // o response.JSON() el que necessiteu */
+
     execute(searchInput) {
         
         console.log(searchInput)
