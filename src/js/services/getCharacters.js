@@ -2,7 +2,14 @@ export default class GetCharactersService {
 
     constructor () { this.fulldata = [] }
 
+<<<<<<< HEAD
     async execute (searchInput) {
+=======
+    /* const response = await fetch(...).then(...).then(data=>data);
+    this.fulldata = response.text() // o response.JSON() el que necessiteu */
+
+    execute(searchInput) {
+>>>>>>> 1cd2847a4cfa8ca91829eff5451c0d99643955d8
         
         console.log(searchInput)
         const response = await fetch (
