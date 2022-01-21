@@ -1,11 +1,12 @@
 .searchbar {
+    text-align: center;
     display: flex; 
     align-items: center;
     justify-content: center;
     margin-top: 100px;
 }
 
-.searchbtn {
+.c-button {
     background-color: #4c6faf;
     color: white;
     border: none;
@@ -19,15 +20,15 @@
     transition-duration: 0.5s;
 }
 
-.searchbtn:hover {
+.c-button:hover {
     transform: scale(1.03);
 }
 
-.searchbtn:active{
+.c-button:active{
     transform: scale(.95)
 }
 
-.searchfield {
+#search-bar {
     background-color: white;
     color: #4c6faf;
     border: none;
@@ -41,6 +42,6 @@
     transition-duration: 0.5s;
 }
 
-.searchfield:hover {
+#search-bar:hover {
     transform: scale(1.02);
 }

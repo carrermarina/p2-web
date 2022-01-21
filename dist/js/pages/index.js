@@ -12,16 +12,4 @@ const app = new Vue({
       searchInput: ""
     };
   },
-
-  /*
-  methods: {
-    loadData() {
-      const getCharacService = new GetCharacters();
-      console.log(this.searchInput)
-
-      this.characters = getCharacService.execute(this.searchInput)
-      console.log(this.characters)
-    }
-  }
-  */
 });
