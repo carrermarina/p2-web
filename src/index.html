@@ -21,7 +21,6 @@
           <search-bar></search-bar>
           <p v-if="searchInput">{{ searchInput }}</p>
           <c-button
-            class="c-button"
             v-for="character in characters"
             v-bind:data="character"
             v-bind:key="character.id"

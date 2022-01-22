@@ -7,9 +7,9 @@ Vue.component("search-bar", {
       };
     },
     template: `
-      <form v-on:submit.prevent="loadData">
-      <input type="text" v-model="searchInput">
-      <input type="submit" value="search">
+      <form class="searchbar" v-on:submit.prevent="loadData">
+      <input type="text" class="searchfield" v-model="searchInput">
+      <input type="submit" class="c-button" value="search">
       </form>`,
     
     methods: {
