@@ -1,6 +1,6 @@
 Vue.component("fichas", {
   props: {
-    data: String
+    data: []
   },
   //template: "<img :src=data />",
   template: '<p>{{ data }}</p>',
