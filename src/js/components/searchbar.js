@@ -20,7 +20,8 @@ Vue.component("search-bar", {
         console.log("this.$root.searchInput: "+this.$root.searchInput)
     
         this.$root.characters = getCharacService.execute(this.$root.searchInput)
-        console.log("this.$root.characters: "+this.$root.characters)
+        console.log("this.$root.characters: ")
+        console.log(+this.$root.characters)
       }
       
     }
