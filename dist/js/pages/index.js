@@ -1,4 +1,3 @@
-import {} from "../components/button.js";
 import {} from "../components/fichas.js";
 import {} from "../components/searchbar.js";
 

@@ -1,8 +1,13 @@
 Vue.component("fichas", {
   props: {
-    data: []
+    data: Object
   },
-  //template: "<img :src=data />",
-  template: '<p>{{ data }}</p>',
+  template: 
+  `<div class="tarja"><p>key: {{ data.key }}
+  <div class="nom">name: {{ data.name }} </div> 
+  <div class="rol">role: {{ data.role }} </div> 
+  <img class="foto":src="data.portrait" alt="fotografia del personatge" width="50px" height="100px">
+  <div class="info">info: {{ data.message }} </div></div>
+  `
 });
 
