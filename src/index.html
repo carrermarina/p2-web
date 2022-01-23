@@ -16,16 +16,18 @@
 
   </head>
   <body>
+    <head >
+      <h1 id="Characters">Characters</h1>
+    </head>
     <main>
       <div id="Personajes">
         <section >
           <search-bar></search-bar>
-          <fichas 
+          <c-button
             v-for="character in characters"
             v-bind:data="character"
             v-bind:key="character.id"
-          >
-          </fichas>
+          ></c-button>
         </section>
       </div>
     </main>
