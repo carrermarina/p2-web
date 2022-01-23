@@ -10,10 +10,19 @@ export default class GetCharactersService {
         )
         .then(response => response.json())
         .then(data => this.fulldata = data);
-        console.log("fulldata:")
-        console.log(this.fulldata)
         return this.fulldata
+    }
+
+    getFulldata() {
+        return this.fulldata;
     }
 }
 
+/*El fetch s'executa en assíncron, per tant, la línia "return this.fulldata" s'executa abans de que el fetch resolgui. 
+Tal com ho teniu us aconsello que feu servir await del fetch d'aquesta manera:
+
+const response = await fetch(...).then(...).then(data=>data);
+this.fulldata = response.text() // o response.JSON() el que necessiteu
+
+D'aquesta manera s'espera a que el fetch acabi i es guarda el resultat a fulldata. */
 

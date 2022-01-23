@@ -14,15 +14,12 @@ Vue.component("search-bar", {
     
     methods: {
      
-      loadData() {
+      async loadData() {
         this.$root.searchInput = this.searchInput;
         const getCharacService = new GetCharacters();
-        console.log("this.$root.searchInput: ");
-        console.log(this.$root.searchInput);
         //la seguent linia no funciona :(
-        this.$root.characters = getCharacService.execute(this.$root.searchInput)
-        console.log("this.$root.characters: ");
-        console.log(this.$root.characters);
+        const response = await getCharacService.execute(this.$root.searchInput);
+        this.$root.characters = getCharacService.getFulldata();
       }
       
     }

@@ -10,9 +10,11 @@ export default class GetCharactersService {
         )
         .then(response => response.json())
         .then(data => this.fulldata = data);
-        console.log("fulldata:")
-        console.log(this.fulldata)
         return this.fulldata
+    }
+
+    getFulldata() {
+        return this.fulldata;
     }
 }
 

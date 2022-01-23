@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="css/pages/index.css">
     <link rel="stylesheet" href="css/components/button.css">
     <link rel="stylesheet" href="css/components/data.css">
+    <!--    ICONES  -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   </head>
   <body>
     <head >
@@ -19,14 +23,11 @@
       <div id="Personajes">
         <section >
           <search-bar></search-bar>
-          <p v-if="searchInput">{{ searchInput }}</p>
           <c-button
             v-for="character in characters"
             v-bind:data="character"
             v-bind:key="character.id"
           ></c-button>
-          <fichas v-bind:data="characterData"></fichas>
-          <fichas v-bind:data="characters"></fichas>
         </section>
       </div>
     </main>
