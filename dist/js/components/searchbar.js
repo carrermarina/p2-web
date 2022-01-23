@@ -3,7 +3,8 @@ import GetCharacters from "../services/getCharacters.js";
 Vue.component("search-bar", {
     data: () => {
       return {
-        searchInput: ""
+        searchInput: "",
+        characters: []
       };
     },
     template: `
@@ -20,7 +21,8 @@ Vue.component("search-bar", {
         console.log("this.$root.searchInput: ");
         console.log(this.$root.searchInput);
         //la seguent linia no funciona :(
-        this.$root.characters = getCharacService.execute(this.$root.searchInput)
+        //this.$root.characters = getCharacService.execute(this.$root.searchInput)
+        this.$root.characters = getCharacService.execute(this.$root.searchInput);
         console.log("this.$root.characters: ");
         console.log(this.$root.characters);
       }
