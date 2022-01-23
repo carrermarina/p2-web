@@ -9,10 +9,10 @@ export default class GetCharactersService {
             'http://localhost:3000/api/list?search=' + searchInput
         )
         .then(response => response.json())
-        .then(data => this.fulldata = response.json());
+        .then(data => data);
         console.log("fulldata:")
         console.log(this.fulldata)
-        return this.fulldata
+        return this.fulldata = response.json()
     }
 }
 
