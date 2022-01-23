@@ -10,7 +10,6 @@ export default class GetCharactersService {
         )
         .then(response => response.json())
         .then(data => this.fulldata = data);
-        //aixo no es passa correctament, data s'omple  pero fulldata no
         console.log("fulldata:")
         console.log(this.fulldata)
         return this.fulldata

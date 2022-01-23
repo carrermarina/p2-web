@@ -9,8 +9,7 @@ export default class GetCharactersService {
             'http://localhost:3000/api/list?search=' + searchInput
         )
         .then(response => response.json())
-        .then(data => this.fulldata = data);
-        //aixo no es passa correctament, data s'omple  pero fulldata no
+        .then(data => this.fulldata = response.json());
         console.log("fulldata:")
         console.log(this.fulldata)
         return this.fulldata
